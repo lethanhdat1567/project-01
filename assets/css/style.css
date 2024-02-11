@@ -8,6 +8,10 @@ body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
 }
+html,
+.body {
+  scroll-behavior: smooth;
+}
 /* Variables */
 :root {
   --primary-color: #0f1b4c;
@@ -47,13 +51,23 @@ a {
 /* Header */
 .header {
   background-color: #e6f0ff;
-  height: 100vh;
+  height: calc(100vh - 90px);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.fixed-header {
+  background-color: #e6f0ff;
+  padding-top: 26px;
+  position: sticky;
+  top: -26px;
+  z-index: 9999;
 }
 .navbar {
   display: flex;
   align-items: center;
-  padding-top: 38px;
+  padding: 12px 0px;
 }
 .navbar ul {
   display: flex;
@@ -82,15 +96,13 @@ a {
 .navbar ul a:hover {
   color: red;
 }
-.hero {
-  margin-top: 130px;
-}
+
 .hero .sub-title {
   font-weight: 500;
   font-size: 1.8rem;
   line-height: 1.5;
   letter-spacing: 0.01em;
-  color: #687691;
+  color: #687690;
 }
 .hero .title {
   font-weight: 700;
@@ -136,10 +148,20 @@ a {
   margin-top: 23px;
 }
 .clients .images {
-  margin-top: 96px;
+  margin-top: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.clients .images a {
+  padding: 0px 42px;
+  display: flex;
+  align-items: center;
+  height: 90px;
+  border-radius: 10px;
+}
+.clients .images a:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 .guides {
   margin-top: 40px;
